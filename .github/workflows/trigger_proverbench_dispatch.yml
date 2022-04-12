@@ -12,7 +12,7 @@ jobs:
       REVISION: ${{ github.event.pull_request.head.sha }}
       REPO: ${{ github.event.repository.name }}
       PR_NUMBER: ${{ github.event.number }}
-      BLA: $ {{ GITHUB_REPOSITORY }}
+      BLA: $ {{ GITHUB_REF }}
     steps:
       - name: Install curl
         run: |
