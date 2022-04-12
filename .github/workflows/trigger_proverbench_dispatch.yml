@@ -12,6 +12,7 @@ jobs:
       REVISION: ${{ github.event.pull_request.head.sha }}
       REPO: ${{ github.event.repository.name }}
       PR_NUMBER: ${{ github.event.number }}
+      BLA: $ {{ GITHUB_REPOSITORY }}
     steps:
       - name: Install curl
         run: |
@@ -20,4 +21,4 @@ jobs:
       - name: Send repo api call
         run: |
           echo \
-           "{\"ref\":\"main\",\"inputs\":{\"halo2pr\":\"${{ env.PR_NUMBER }}\",\"revision\":\"${{ env.REVISION }}\",\"event-type\":\"halo2_wfdispatch\",\"ghuser\": \"${{ env.GH_USER }}\"}}"
+           "{\"ref\":\"main\",\"inputs\":{\"halo2pr\":\"${{ env.PR_NUMBER }}\",\"revision\":\"${{ env.REVISION }}\",\"event-type\":\"halo2_wfdispatch\",\"ghuser\": \"${{ env.BLA }}\"}}"
