@@ -17,6 +17,8 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           override: false
+      - name: Install toolchain
+        run: /home/runner/.cargo/bin/rustup toolchain install 'nightly-x86_64-unknown-linux-gnu'
       - name: Run benchmark
         run: cargo +nightly bench | tee output.txt
       - name: Store benchmark result
