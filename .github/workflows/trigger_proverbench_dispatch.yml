@@ -20,4 +20,4 @@ jobs:
       - name: Send repo api call
         run: |
           echo \
-        "{\"ref\":\"main\",\"inputs\":{\"halo2pr\":\"${{ env.PR_NUMBER }}\",\"revision\":\"${{ env.REVISION }}\",\"event-type\":\"halo2_wfdispatch\",\"ghuser\": \"${{ env.GH_USER }}\",\"repo\": \"$GITHUB_REPOSITORY\",\"branch\": \"$GITHUB_HEAD_REF\"}}"
+           "{\"ref\":\"main\",\"inputs\":{\"halo2pr\":\"${{ env.PR_NUMBER }}\",\"revision\":\"${{ env.REVISION }}\",\"event-type\":\"halo2_wfdispatch\",\"ghuser\": \"${{ env.GH_USER }}\",\"repo\": \"$GITHUB_REPOSITORY\",\"branch\": \"$GITHUB_HEAD_REF\"}}"
