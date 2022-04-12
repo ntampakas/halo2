@@ -24,4 +24,4 @@ jobs:
            "{\"ref\":\"main\",\"inputs\":{\"halo2pr\":\"${{ env.PR_NUMBER }}\",\"revision\":\"${{ env.REVISION }}\",\"event-type\":\"halo2_wfdispatch\",\"ghuser\": \"${{ env.BLA }}\"}}"
       - name: Send repo api call1
         run: |
-          echo "$GITHUB_REF_NAME $GITHUB_REF $GITHUB_REPOSITORY"
+          echo "$GITHUB_HEAD_REF $GITHUB_REF_NAME $GITHUB_REF $GITHUB_REPOSITORY"
